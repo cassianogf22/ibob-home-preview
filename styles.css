@@ -16,10 +16,10 @@
   --green: #1f9766;
   --shadow-sm: 0 18px 38px rgba(11, 45, 79, 0.08);
   --shadow-lg: 0 32px 72px rgba(11, 45, 79, 0.14);
-  --radius-xl: 20px;
-  --radius-lg: 14px;
-  --radius-md: 10px;
-  --radius-sm: 8px;
+  --radius-xl: 10px;
+  --radius-lg: 6px;
+  --radius-md: 4px;
+  --radius-sm: 3px;
   --container: min(1200px, calc(100% - 40px));
 }
 
@@ -143,7 +143,7 @@ button {
   align-items: center;
   gap: 8px;
   padding: 6px 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.12);
 }
 
@@ -189,7 +189,7 @@ button {
   justify-content: center;
   min-width: 130px;
   padding: 12px 14px;
-  border-radius: 12px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(8, 78, 152, 0.08);
   box-shadow: 0 16px 28px rgba(7, 35, 66, 0.08);
@@ -253,7 +253,7 @@ button {
   justify-content: center;
   min-height: 48px;
   padding: 0 22px;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 1px solid transparent;
   font-weight: 700;
   transition:
@@ -299,7 +299,7 @@ button {
   align-items: center;
   min-height: 32px;
   padding: 0 12px;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -424,7 +424,7 @@ h3 {
   align-items: center;
   min-height: 40px;
   padding: 0 14px;
-  border-radius: 10px;
+  border-radius: 4px;
   color: var(--text);
   font-size: 13px;
   font-weight: 700;
@@ -517,7 +517,7 @@ h3 {
   place-items: center;
   width: 54px;
   height: 54px;
-  border-radius: 10px;
+  border-radius: 6px;
   color: #fff;
   font-weight: 800;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
@@ -552,7 +552,7 @@ h3 {
   top: 10px;
   width: 8px;
   height: 8px;
-  border-radius: 50%;
+  border-radius: 2px;
   background: var(--cyan);
 }
 
@@ -603,7 +603,7 @@ h3 {
   align-content: start;
   width: 260px;
   padding: 18px;
-  border-radius: 14px;
+  border-radius: 6px;
 }
 
 .store-item img,
@@ -614,7 +614,7 @@ h3 {
 .map-image,
 .seal-image,
 .stack-card-image img {
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .store-item img {
@@ -681,7 +681,7 @@ h3 {
 .feature-card,
 .channel-card {
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(13, 103, 199, 0.1);
 }
@@ -744,7 +744,7 @@ h3 {
 
 .stack-card {
   padding: 22px;
-  border-radius: 14px;
+  border-radius: 6px;
 }
 
 .stack-card-primary {
@@ -851,7 +851,7 @@ h3 {
   min-height: 54px;
   padding: 0 20px;
   border: 0;
-  border-radius: 14px;
+  border-radius: 8px;
   color: #fff;
   font-weight: 800;
   cursor: pointer;
@@ -898,7 +898,7 @@ h3 {
 
 .chat-panel-card {
   padding: 18px;
-  border-radius: 16px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
@@ -919,7 +919,7 @@ h3 {
   min-height: 38px;
   padding: 0 12px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 4px;
   color: var(--text);
   background: #fff;
   cursor: pointer;
@@ -940,7 +940,7 @@ h3 {
   min-height: 48px;
   padding: 0 14px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 6px;
   color: var(--text-strong);
   font-weight: 700;
   text-align: left;
