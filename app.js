@@ -7,6 +7,8 @@ const chatOpenButtons = Array.from(document.querySelectorAll("[data-chat-open]")
 const chatCloseButtons = Array.from(document.querySelectorAll("[data-chat-close]"));
 const scrollButtons = Array.from(document.querySelectorAll("[data-scroll-target]"));
 const revealItems = Array.from(document.querySelectorAll(".reveal"));
+const heroVideoPlayer = document.querySelector("#hero-video-player");
+const HERO_VIDEO_START = 33;
 
 function setChatState(isOpen) {
   if (!chatPanel) return;
@@ -30,6 +32,48 @@ function handleScrollState() {
   const scrolled = window.scrollY > 24;
   header?.classList.toggle("is-scrolled", scrolled);
   floatingButton?.classList.toggle("is-visible", window.scrollY > 320);
+}
+
+function initHeroVideoLoop() {
+  if (!heroVideoPlayer) return;
+
+  const setupPlayer = () => {
+    if (!window.YT?.Player) return;
+
+    const player = new window.YT.Player(heroVideoPlayer, {
+      events: {
+        onReady: ({ target }) => {
+          target.mute();
+          target.seekTo(HERO_VIDEO_START, true);
+          target.playVideo();
+        },
+        onStateChange: ({ data, target }) => {
+          if (data !== window.YT.PlayerState.ENDED) return;
+          target.seekTo(HERO_VIDEO_START, true);
+          target.playVideo();
+        },
+      },
+    });
+
+    return player;
+  };
+
+  if (window.YT?.Player) {
+    setupPlayer();
+    return;
+  }
+
+  const previousReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    if (typeof previousReady === "function") previousReady();
+    setupPlayer();
+  };
+
+  if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+    const script = document.createElement("script");
+    script.src = "https://www.youtube.com/iframe_api";
+    document.head.append(script);
+  }
 }
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -83,5 +127,6 @@ navLinks?.querySelectorAll("a").forEach((link) => {
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
+initHeroVideoLoop();
 handleScrollState();
 window.addEventListener("scroll", handleScrollState, { passive: true });
