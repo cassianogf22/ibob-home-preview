@@ -1,19 +1,19 @@
 :root {
-  --bg: #f4f8fc;
-  --bg-soft: #ecf4fb;
+  --bg: #f2f4f6;
+  --bg-soft: #e8eaed;
   --surface: #ffffff;
   --surface-strong: #ffffff;
-  --surface-tint: #e9f3fd;
-  --text: #14304f;
-  --text-strong: #09223d;
-  --muted: #53708d;
-  --line: rgba(13, 103, 199, 0.14);
-  --line-strong: rgba(13, 103, 199, 0.22);
-  --blue: #0d67c7;
-  --blue-strong: #084e98;
-  --blue-soft: #dcebfa;
-  --cyan: #1d90d8;
-  --green: #1f9766;
+  --surface-tint: #d8e6f2;
+  --text: #1b2a3b;
+  --text-strong: #0d1b2a;
+  --muted: #556778;
+  --line: rgba(0, 0, 0, 0.1);
+  --line-strong: rgba(0, 0, 0, 0.16);
+  --blue: #005bac;
+  --blue-strong: #003f7d;
+  --blue-soft: #d8e6f2;
+  --cyan: #005bac;
+  --green: #003f7d;
   --shadow-sm: 0 2px 8px rgba(11, 45, 79, 0.08);
   --shadow-lg: 0 4px 20px rgba(11, 45, 79, 0.12);
   --radius-xl: 4px;
@@ -36,7 +36,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background: #f5f7f9;
+  background: var(--bg);
   font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
@@ -85,8 +85,8 @@ button {
 }
 
 .topbar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background: #0a5fb7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  background: var(--blue-strong);
   color: #fff;
 }
 
@@ -155,7 +155,7 @@ button {
   gap: 8px;
   padding: 6px 10px;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .topbar-links a::before {
@@ -178,9 +178,9 @@ button {
 
 .site-header.is-scrolled {
   background: rgba(255, 255, 255, 0.9);
-  border-bottom: 2px solid #0a5fb7;
+  border-bottom: 2px solid var(--blue-strong);
   backdrop-filter: blur(16px);
-  box-shadow: 0 14px 34px rgba(10, 49, 89, 0.08);
+  box-shadow: 0 6px 16px rgba(13, 27, 42, 0.08);
 }
 
 .header-shell {
@@ -202,8 +202,8 @@ button {
   padding: 12px 14px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(8, 78, 152, 0.08);
-  box-shadow: 0 16px 28px rgba(7, 35, 66, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(13, 27, 42, 0.06);
 }
 
 .brand-logo {
@@ -281,19 +281,19 @@ button {
 
 .btn-primary {
   color: #fff;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
-  box-shadow: 0 18px 32px rgba(13, 103, 199, 0.24);
+  background: var(--blue);
+  box-shadow: 0 2px 10px rgba(0, 63, 125, 0.18);
 }
 
 .btn-secondary {
   color: var(--blue-strong);
-  background: var(--blue-soft);
-  border-color: rgba(13, 103, 199, 0.12);
+  background: var(--bg-soft);
+  border-color: rgba(0, 63, 125, 0.24);
 }
 
 .btn-ghost {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.78);
+  background: #fff;
   border-color: var(--line);
 }
 
@@ -320,7 +320,7 @@ button {
 .section-kicker {
   gap: 10px;
   color: var(--blue);
-  background: rgba(13, 103, 199, 0.08);
+  background: var(--blue-soft);
 }
 
 .section-kicker::before {
@@ -373,7 +373,7 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, rgba(247, 251, 255, 0.96) 8%, rgba(247, 251, 255, 0.84) 45%, rgba(13, 103, 199, 0.14) 100%),
+    linear-gradient(100deg, rgba(255, 255, 255, 0.96) 8%, rgba(255, 255, 255, 0.88) 48%, rgba(13, 27, 42, 0.08) 100%),
     url("https://ibob.com.br/wp-content/uploads/2024/06/BANNER1_HOME_DESK_11.06-1.jpg") center/cover no-repeat;
 }
 
@@ -438,8 +438,8 @@ h3 {
   color: var(--text);
   font-size: 13px;
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(13, 103, 199, 0.1);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .hero-panel {
@@ -454,17 +454,16 @@ h3 {
 }
 
 .hero-card-strong {
-  background:
-    linear-gradient(180deg, rgba(13, 103, 199, 0.12), rgba(255, 255, 255, 0.92));
+  background: linear-gradient(180deg, rgba(216, 230, 242, 0.95), rgba(255, 255, 255, 0.98));
 }
 
 .panel-tag {
   color: #fff;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  background: var(--blue);
 }
 
 .panel-tag-soft {
-  background: linear-gradient(135deg, #6ca3d9, #4e8ccb);
+  background: #5f7387;
 }
 
 .hero-card p {
@@ -531,11 +530,11 @@ h3 {
   border-radius: 2px;
   color: #fff;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  background: var(--blue);
 }
 
 .decision-index-alt {
-  background: linear-gradient(135deg, #1f9766, #4eb58a);
+  background: var(--blue-strong);
 }
 
 .decision-card ul,
@@ -564,7 +563,7 @@ h3 {
   width: 8px;
   height: 8px;
   border-radius: 2px;
-  background: var(--cyan);
+  background: var(--blue);
 }
 
 .decision-card h3,
@@ -632,14 +631,14 @@ h3 {
   width: 100%;
   aspect-ratio: 1;
   object-fit: contain;
-  background: linear-gradient(180deg, #ffffff, #f3f8fd);
-  border: 1px solid rgba(13, 103, 199, 0.08);
+  background: #f7f8f9;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .store-item-type {
   margin-top: 16px;
   color: var(--blue);
-  background: rgba(13, 103, 199, 0.08);
+  background: var(--blue-soft);
 }
 
 .store-item strong {
@@ -693,8 +692,8 @@ h3 {
 .channel-card {
   padding: 20px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(13, 103, 199, 0.1);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .feature-card p {
@@ -734,7 +733,7 @@ h3 {
 
 .product-badge {
   color: #fff;
-  background: linear-gradient(135deg, #1f9766, #4eb58a);
+  background: var(--blue);
 }
 
 .channel-list,
@@ -759,7 +758,7 @@ h3 {
 }
 
 .stack-card-primary {
-  background: linear-gradient(180deg, rgba(13, 103, 199, 0.12), rgba(255, 255, 255, 0.92));
+  background: linear-gradient(180deg, rgba(216, 230, 242, 0.9), rgba(255, 255, 255, 1));
 }
 
 .stack-card p {
@@ -783,7 +782,7 @@ h3 {
 
 .map-image {
   width: 100%;
-  background: linear-gradient(180deg, #ffffff, #eef6fd);
+  background: #f7f8f9;
   padding: 16px;
 }
 
@@ -833,7 +832,7 @@ h3 {
   margin-top: 24px;
   border-top: 1px solid var(--line);
   padding: 34px 0 46px;
-  background: rgba(255, 255, 255, 0.74);
+  background: #ffffff;
 }
 
 .footer-shell {
@@ -866,8 +865,8 @@ h3 {
   color: #fff;
   font-weight: 800;
   cursor: pointer;
-  background: linear-gradient(135deg, #1f9766, #37b57d);
-  box-shadow: 0 22px 34px rgba(31, 151, 102, 0.28);
+  background: var(--blue-strong);
+  box-shadow: 0 4px 14px rgba(0, 63, 125, 0.24);
   opacity: 0;
   pointer-events: none;
   transform: translateY(12px);
@@ -910,7 +909,7 @@ h3 {
 .chat-panel-card {
   padding: 18px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.96);
+  background: #ffffff;
   border: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
 }
@@ -955,25 +954,25 @@ h3 {
   color: var(--text-strong);
   font-weight: 700;
   text-align: left;
-  background: linear-gradient(180deg, #fff, #f5f9fd);
+  background: #ffffff;
   cursor: pointer;
 }
 
 .chat-option:hover,
 .chat-option:focus-visible {
   border-color: var(--line-strong);
-  background: linear-gradient(180deg, #fff, #edf5fd);
+  background: var(--bg-soft);
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(31, 151, 102, 0.28);
+    box-shadow: 0 0 0 0 rgba(0, 63, 125, 0.24);
   }
   70% {
-    box-shadow: 0 0 0 14px rgba(31, 151, 102, 0);
+    box-shadow: 0 0 0 14px rgba(0, 63, 125, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(31, 151, 102, 0);
+    box-shadow: 0 0 0 0 rgba(0, 63, 125, 0);
   }
 }
 
