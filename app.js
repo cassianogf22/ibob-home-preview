@@ -1,6 +1,8 @@
 const header = document.querySelector("[data-header]");
 const floatingButton = document.querySelector(".chat-float");
 const chatPanel = document.querySelector("[data-chat-panel]");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const navLinks = document.querySelector(".nav-links");
 const chatOpenButtons = Array.from(document.querySelectorAll("[data-chat-open]"));
 const chatCloseButtons = Array.from(document.querySelectorAll("[data-chat-close]"));
 const scrollButtons = Array.from(document.querySelectorAll("[data-scroll-target]"));
@@ -16,6 +18,12 @@ function scrollToTarget(targetSelector) {
   const target = document.querySelector(targetSelector);
   if (!target) return;
   target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function setMenuState(isOpen) {
+  if (!menuToggle || !navLinks) return;
+  navLinks.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 }
 
 function handleScrollState() {
@@ -49,6 +57,11 @@ scrollButtons.forEach((button) => {
   });
 });
 
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navLinks?.classList.contains("is-open");
+  setMenuState(!isOpen);
+});
+
 document.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof Element)) return;
@@ -58,7 +71,14 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setChatState(false);
+  if (event.key === "Escape") {
+    setChatState(false);
+    setMenuState(false);
+  }
+});
+
+navLinks?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenuState(false));
 });
 
 revealItems.forEach((item) => revealObserver.observe(item));

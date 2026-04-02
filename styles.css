@@ -1,7 +1,7 @@
 :root {
   --bg: #f4f8fc;
   --bg-soft: #ecf4fb;
-  --surface: rgba(255, 255, 255, 0.88);
+  --surface: #ffffff;
   --surface-strong: #ffffff;
   --surface-tint: #e9f3fd;
   --text: #14304f;
@@ -14,12 +14,12 @@
   --blue-soft: #dcebfa;
   --cyan: #1d90d8;
   --green: #1f9766;
-  --shadow-sm: 0 18px 38px rgba(11, 45, 79, 0.08);
-  --shadow-lg: 0 32px 72px rgba(11, 45, 79, 0.14);
-  --radius-xl: 10px;
-  --radius-lg: 6px;
-  --radius-md: 4px;
-  --radius-sm: 3px;
+  --shadow-sm: 0 2px 8px rgba(11, 45, 79, 0.08);
+  --shadow-lg: 0 4px 20px rgba(11, 45, 79, 0.12);
+  --radius-xl: 4px;
+  --radius-lg: 3px;
+  --radius-md: 2px;
+  --radius-sm: 2px;
   --container: min(1200px, calc(100% - 40px));
 }
 
@@ -36,10 +36,7 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  background:
-    radial-gradient(circle at top left, rgba(29, 144, 216, 0.12), transparent 26%),
-    radial-gradient(circle at top right, rgba(13, 103, 199, 0.1), transparent 24%),
-    linear-gradient(180deg, #f7fbff 0%, #f2f8fe 28%, #edf5fc 100%);
+  background: #f5f7f9;
   font-family: "Manrope", "Segoe UI", sans-serif;
 }
 
@@ -63,7 +60,7 @@ button {
 }
 
 .section-pad {
-  padding: 96px 0;
+  padding: 72px 0;
 }
 
 .reveal {
@@ -89,7 +86,7 @@ button {
 
 .topbar {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(90deg, #0a5fb7, #1483d1);
+  background: #0a5fb7;
   color: #fff;
 }
 
@@ -107,6 +104,20 @@ button {
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--text-strong);
+  font-weight: 700;
+  background: #fff;
+  cursor: pointer;
 }
 
 .card-actions,
@@ -143,7 +154,7 @@ button {
   align-items: center;
   gap: 8px;
   padding: 6px 10px;
-  border-radius: 4px;
+  border-radius: 2px;
   background: rgba(255, 255, 255, 0.12);
 }
 
@@ -167,14 +178,14 @@ button {
 
 .site-header.is-scrolled {
   background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid #0a5fb7;
   backdrop-filter: blur(16px);
   box-shadow: 0 14px 34px rgba(10, 49, 89, 0.08);
 }
 
 .header-shell {
   justify-content: space-between;
-  min-height: 88px;
+  min-height: 68px;
 }
 
 .brand {
@@ -189,7 +200,7 @@ button {
   justify-content: center;
   min-width: 130px;
   padding: 12px 14px;
-  border-radius: 8px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(8, 78, 152, 0.08);
   box-shadow: 0 16px 28px rgba(7, 35, 66, 0.08);
@@ -253,7 +264,7 @@ button {
   justify-content: center;
   min-height: 48px;
   padding: 0 22px;
-  border-radius: 6px;
+  border-radius: 3px;
   border: 1px solid transparent;
   font-weight: 700;
   transition:
@@ -299,7 +310,7 @@ button {
   align-items: center;
   min-height: 32px;
   padding: 0 12px;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -331,7 +342,7 @@ h2,
 h3 {
   margin: 0;
   font-family: "Sora", "Segoe UI", sans-serif;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -394,7 +405,6 @@ h3 {
   background: var(--surface);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(14px);
 }
 
 .hero-copy,
@@ -424,7 +434,7 @@ h3 {
   align-items: center;
   min-height: 40px;
   padding: 0 14px;
-  border-radius: 4px;
+  border-radius: 2px;
   color: var(--text);
   font-size: 13px;
   font-weight: 700;
@@ -495,6 +505,7 @@ h3 {
 .decision-card {
   padding: 28px;
   border-radius: var(--radius-lg);
+  border-left: 3px solid var(--blue);
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
@@ -517,7 +528,7 @@ h3 {
   place-items: center;
   width: 54px;
   height: 54px;
-  border-radius: 6px;
+  border-radius: 2px;
   color: #fff;
   font-weight: 800;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
@@ -603,7 +614,7 @@ h3 {
   align-content: start;
   width: 260px;
   padding: 18px;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .store-item img,
@@ -614,7 +625,7 @@ h3 {
 .map-image,
 .seal-image,
 .stack-card-image img {
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .store-item img {
@@ -681,7 +692,7 @@ h3 {
 .feature-card,
 .channel-card {
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(13, 103, 199, 0.1);
 }
@@ -744,7 +755,7 @@ h3 {
 
 .stack-card {
   padding: 22px;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
 .stack-card-primary {
@@ -851,7 +862,7 @@ h3 {
   min-height: 54px;
   padding: 0 20px;
   border: 0;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #fff;
   font-weight: 800;
   cursor: pointer;
@@ -898,7 +909,7 @@ h3 {
 
 .chat-panel-card {
   padding: 18px;
-  border-radius: 8px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
@@ -919,7 +930,7 @@ h3 {
   min-height: 38px;
   padding: 0 12px;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 2px;
   color: var(--text);
   background: #fff;
   cursor: pointer;
@@ -940,7 +951,7 @@ h3 {
   min-height: 48px;
   padding: 0 14px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 3px;
   color: var(--text-strong);
   font-weight: 700;
   text-align: left;
@@ -1005,7 +1016,54 @@ h3 {
   }
 }
 
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid,
+  .highlight-grid,
+  .feature-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    order: 4;
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
+
+  .header-actions {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 760px) {
+  .topbar {
+    display: none;
+  }
+
   .container {
     width: min(100% - 28px, 1200px);
   }
@@ -1038,6 +1096,11 @@ h3 {
   }
 
   .btn {
+    width: auto;
+  }
+
+  .hero-actions .btn,
+  .section-cta .btn {
     width: 100%;
   }
 
@@ -1056,20 +1119,25 @@ h3 {
     width: 100%;
   }
 
+  .menu-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
   .topbar-shell {
     padding: 10px 0;
   }
 
   h1 {
-    font-size: 40px;
-  }
-
-  h2 {
     font-size: 34px;
   }
 
+  h2 {
+    font-size: 28px;
+  }
+
   .section-pad {
-    padding: 76px 0;
+    padding: 52px 0;
   }
 
   .store-marquee {
