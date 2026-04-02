@@ -665,9 +665,13 @@ h3 {
 }
 
 .split-grid,
-.support-grid,
-.final-grid {
+.support-grid {
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+  align-items: stretch;
+}
+
+.final-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   align-items: stretch;
 }
 
@@ -806,9 +810,21 @@ h3 {
 
 .guarantee-card {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   gap: 24px;
   align-items: center;
+}
+
+.guarantee-card > div,
+.contact-card,
+.final-grid > * {
+  min-width: 0;
+}
+
+.guarantee-card h2 {
+  font-size: clamp(28px, 3.8vw, 46px);
+  line-height: 1;
+  max-width: 10ch;
 }
 
 .seal-image {
