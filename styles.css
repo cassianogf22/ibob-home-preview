@@ -476,6 +476,62 @@ h3 {
   line-height: 1.72;
 }
 
+.institutional-video-section {
+  background:
+    linear-gradient(180deg, rgba(216, 230, 242, 0.38) 0%, rgba(242, 244, 246, 0.9) 42%, rgba(242, 244, 246, 1) 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.video-shell {
+  padding: 34px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.video-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 24px;
+  align-items: end;
+}
+
+.video-meta {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.video-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border: 1px solid rgba(0, 91, 172, 0.14);
+  color: var(--blue-strong);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: rgba(216, 230, 242, 0.56);
+}
+
+.video-stage {
+  margin-top: 26px;
+  padding: 12px;
+  background:
+    linear-gradient(180deg, rgba(13, 27, 42, 0.92), rgba(13, 27, 42, 0.84));
+  box-shadow: var(--shadow-lg);
+}
+
+.institutional-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #0d1b2a;
+}
+
 .mini-links {
   flex-wrap: wrap;
 }
@@ -1022,6 +1078,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .video-intro {
+    grid-template-columns: 1fr;
+  }
+
   .header-shell {
     gap: 18px;
     padding: 12px 0;
@@ -1122,7 +1182,8 @@ h3 {
   .guarantee-card,
   .contact-card,
   .hero-card,
-  .decision-card {
+  .decision-card,
+  .video-shell {
     padding: 24px;
   }
 
@@ -1171,6 +1232,15 @@ h3 {
 
   .image-panel img {
     min-height: 320px;
+  }
+
+  .video-stage {
+    margin-top: 22px;
+    padding: 8px;
+  }
+
+  .video-meta {
+    gap: 8px;
   }
 
   .chat-float {
