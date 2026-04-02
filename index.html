@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iBob | Motores, Inversores e Automacao Industrial</title>
+    <meta
+      name="description"
+      content="Compra online para itens de pronta entrega e atendimento consultivo para motores, inversores, motoredutores e aplicacoes industriais."
+    >
+    <meta name="theme-color" content="#0d67c7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <button
+      class="chat-float"
+      type="button"
+      data-chat-open
+      aria-label="Abrir chat de triagem da iBob"
+    >
+      Chat iBob IA
+    </button>
+
+    <aside class="chat-panel" data-chat-panel aria-hidden="true">
+      <div class="chat-panel-card">
+        <div class="chat-panel-header">
+          <strong>Chat iBob IA</strong>
+          <button class="chat-close" type="button" data-chat-close aria-label="Fechar chat">Fechar</button>
+        </div>
+        <p>Como podemos te direcionar?</p>
+        <div class="chat-options">
+          <button class="chat-option" type="button" data-scroll-target="#loja">Quero comprar online</button>
+          <button class="chat-option" type="button" data-scroll-target="#consultoria">Preciso de ajuda tecnica</button>
+          <button class="chat-option" type="button" data-scroll-target="#contato">Falar com especialista</button>
+        </div>
+      </div>
+    </aside>
+
+    <header class="site-header" data-header>
+      <div class="topbar">
+        <div class="container topbar-shell">
+          <p>Disponivel na Loja Oficial, Mercado Livre e com itens selecionados em marketplaces nacionais.</p>
+          <div class="topbar-links">
+            <a href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">Loja Oficial</a>
+            <a href="https://loja.mercadolivre.com.br/ibob" target="_blank" rel="noreferrer">Mercado Livre</a>
+            <a href="https://www.magazineluiza.com.br/motor-eletrico-monofasico-2cv-2-polos-alta-rotacao-com-polia-mercosul/p/hh9hbh46c9/pi/mtel/" target="_blank" rel="noreferrer">Magalu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container header-shell">
+        <a class="brand" href="#topo" aria-label="iBob">
+          <span class="brand-logo-wrap">
+            <img
+              class="brand-logo"
+              src="https://ibob.com.br/wp-content/uploads/2024/05/cropped-Logo-preto-PRO-sem-fundo-Copia-Copia-2.png"
+              alt="iBob"
+            >
+          </span>
+          <span class="brand-copy">
+            <strong>iBob</strong>
+            <small>Motores, inversores, motoredutores e automacao industrial</small>
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Principal">
+          <a href="#solucoes">Produtos e Servicos</a>
+          <a href="#loja">Onde Comprar</a>
+          <a href="#marketplaces">Marketplaces</a>
+          <a href="#suporte">Suporte</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="#loja">Loja Online</a>
+          <button class="btn btn-primary" type="button" data-chat-open>Chat com IA</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="topo">
+      <section class="hero-section">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="section-kicker">Seja bem-vindo a iBob</span>
+            <h1>Compra online para itens padrao. Venda consultiva para aplicacoes tecnicas.</h1>
+            <p class="hero-lead">Uma home direta para orientar o lead com menos atrito.</p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-large" href="#loja">
+                Comprar online
+              </a>
+              <button class="btn btn-secondary btn-large" type="button" data-chat-open>Falar com especialista</button>
+            </div>
+
+            <div class="hero-points">
+              <span>Pronta entrega</span>
+              <span>Atendimento Brasil</span>
+              <span>Loja Oficial</span>
+              <span>Marketplace ativo</span>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal reveal-delay-1" aria-label="Acesso rapido aos principais canais">
+            <article class="hero-card hero-card-strong">
+              <span class="panel-tag">Compra direta</span>
+              <h2>Loja Online e marketplaces</h2>
+              <p>Compra objetiva, reposicao e pronta entrega.</p>
+              <div class="mini-links">
+                <a href="#loja">Loja Oficial</a>
+                <a href="#marketplaces">Mercado Livre</a>
+                <a href="#marketplaces">Magalu</a>
+              </div>
+            </article>
+
+            <article class="hero-card">
+              <span class="panel-tag panel-tag-soft">Venda consultiva</span>
+              <h2>Especialistas para aplicacoes tecnicas</h2>
+              <p>Triagem rapida para motor, inversor, motorredutor ou apoio tecnico.</p>
+              <div class="mini-links">
+                <a href="#consultoria">Inversores</a>
+                <a href="#consultoria">Motores</a>
+                <a href="#consultoria">Motorredutores</a>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="decision-strip section-pad" id="solucoes">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Jornada comercial</span>
+            <h2>Escolha o caminho certo.</h2>
+            <p>Compra direta ou atendimento tecnico.</p>
+          </div>
+
+          <div class="decision-grid">
+            <article class="decision-card reveal">
+              <div class="decision-index">01</div>
+              <h3>Comprar online</h3>
+              <p>Automacao, reposicao e item padrao.</p>
+              <ul>
+                <li>Compra direta na loja oficial</li>
+                <li>Canal complementar no Mercado Livre</li>
+                <li>Itens selecionados em marketplace nacional</li>
+              </ul>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="#loja">Ir para loja</a>
+                <a class="btn btn-ghost" href="#marketplaces">Ver marketplaces</a>
+              </div>
+            </article>
+
+            <article class="decision-card reveal reveal-delay-1">
+              <div class="decision-index decision-index-alt">02</div>
+              <h3>Falar com o time tecnico</h3>
+              <p>Motores, inversores, motoredutores e projetos.</p>
+              <ul>
+                <li>Triagem rapida com chat e especialista</li>
+                <li>Fluxo consultivo por linha de produto</li>
+                <li>Ponte com profissionais indicados</li>
+              </ul>
+              <div class="card-actions">
+                <button class="btn btn-secondary" type="button" data-chat-open>Falar com especialista</button>
+                <a class="btn btn-ghost" href="#suporte">Profissionais indicados</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="store-section section-pad" id="loja">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Loja online em destaque</span>
+            <h2>Produtos girando na home para acelerar a compra.</h2>
+            <p>Itens reais da operacao atual.</p>
+          </div>
+
+          <div class="store-marquee reveal reveal-delay-1" aria-label="Produtos em destaque da loja online">
+            <div class="store-track">
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_rele_bimetalico_termico_sobrecarga_rta_18_ajuste_1_6_2_5a_773_1_4d726b76db05d5177f465f0367171599.png" alt="Rele bimetalico termico">
+                <span class="store-item-type">Automacao industrial</span>
+                <strong>Rele Bimetalico Termico Sobrecarga Rta 18</strong>
+                <span class="store-item-price">R$ 92,57</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_tomada_sobrepor_2p_t_32a_220_250v_az_6h_ip44_771_1_bb7ed75e1ea4a6813c37c30016681540.png" alt="Tomada sobrepor industrial">
+                <span class="store-item-type">Pronta entrega</span>
+                <strong>Tomada Sobrepor 2P+T 32A 220/250V</strong>
+                <span class="store-item-price">R$ 34,27</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_plugue_2p_t_32a_220_250v_az_6h_ip44_763_1_2aba266f3d96bfef44f2b19d82bcc40c.png" alt="Plugue industrial">
+                <span class="store-item-type">Reposicao</span>
+                <strong>Plugue 2P+T 32A 220/250V AZ 6H IP44</strong>
+                <span class="store-item-price">R$ 29,92</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_kit_3_un_rele_de_falta_de_fase_sem_neutro_bivolt_220_380v_731_1_11ecbe18e61da157e2d590569f3160e6.png" alt="Kit rele de falta de fase">
+                <span class="store-item-type">Compra direta</span>
+                <strong>Kit 3 un. Rele de Falta de Fase 220/380V</strong>
+                <span class="store-item-price">R$ 266,48</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_rele_de_interface_24vcc_717_1_9b3b3713c609040def02900e8ae4b7c0.png" alt="Rele de interface 24VCC">
+                <span class="store-item-type">Automacao industrial</span>
+                <strong>Rele de Interface 24VCC</strong>
+                <span class="store-item-price">R$ 51,43</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_programador_horario_pds_modelo_02_mg_110_220vca_40p_711_1_793065b9289da284909e0992a8df5fb0.png" alt="Programador horario">
+                <span class="store-item-type">Compra direta</span>
+                <strong>Programador Horario PDS Modelo 02 MG</strong>
+                <span class="store-item-price">R$ 139,32</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_rele_bimetalico_termico_sobrecarga_rta_18_ajuste_1_6_2_5a_773_1_4d726b76db05d5177f465f0367171599.png" alt="">
+                <span class="store-item-type">Automacao industrial</span>
+                <strong>Rele Bimetalico Termico Sobrecarga Rta 18</strong>
+                <span class="store-item-price">R$ 92,57</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_tomada_sobrepor_2p_t_32a_220_250v_az_6h_ip44_771_1_bb7ed75e1ea4a6813c37c30016681540.png" alt="">
+                <span class="store-item-type">Pronta entrega</span>
+                <strong>Tomada Sobrepor 2P+T 32A 220/250V</strong>
+                <span class="store-item-price">R$ 34,27</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_plugue_2p_t_32a_220_250v_az_6h_ip44_763_1_2aba266f3d96bfef44f2b19d82bcc40c.png" alt="">
+                <span class="store-item-type">Reposicao</span>
+                <strong>Plugue 2P+T 32A 220/250V AZ 6H IP44</strong>
+                <span class="store-item-price">R$ 29,92</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_kit_3_un_rele_de_falta_de_fase_sem_neutro_bivolt_220_380v_731_1_11ecbe18e61da157e2d590569f3160e6.png" alt="">
+                <span class="store-item-type">Compra direta</span>
+                <strong>Kit 3 un. Rele de Falta de Fase 220/380V</strong>
+                <span class="store-item-price">R$ 266,48</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_rele_de_interface_24vcc_717_1_9b3b3713c609040def02900e8ae4b7c0.png" alt="">
+                <span class="store-item-type">Automacao industrial</span>
+                <strong>Rele de Interface 24VCC</strong>
+                <span class="store-item-price">R$ 51,43</span>
+              </a>
+
+              <a class="store-item" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer" aria-hidden="true">
+                <img src="https://images.tcdn.com.br/img/img_prod/1035972/180_programador_horario_pds_modelo_02_mg_110_220vca_40p_711_1_793065b9289da284909e0992a8df5fb0.png" alt="">
+                <span class="store-item-type">Compra direta</span>
+                <strong>Programador Horario PDS Modelo 02 MG</strong>
+                <span class="store-item-price">R$ 139,32</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="section-cta reveal reveal-delay-2">
+            <a class="btn btn-primary" href="#marketplaces">Ver canais de compra</a>
+            <button class="btn btn-ghost" type="button" data-chat-open>Preciso de ajuda</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section section-pad">
+        <div class="container split-grid">
+          <div class="image-panel reveal">
+            <img
+              src="https://ibob.com.br/wp-content/uploads/2024/06/DSC08961.jpg"
+              alt="Equipe iBob"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="content-panel reveal reveal-delay-1">
+            <span class="section-kicker">Conheca a iBob</span>
+            <h2>Compra recorrente e venda tecnica no mesmo ecossistema.</h2>
+            <p>Distribuicao nacional, time especializado e resposta rapida.</p>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>Time especializado</h3>
+                <p>Atendimento comercial mais seguro para produtos tecnicos e aplicacoes mais sensiveis.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Maior mix de motores</h3>
+                <p>Variedade para dividir melhor o que entra em checkout e o que segue para venda consultiva.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Logistica integrada</h3>
+                <p>Entrega em todo o Brasil com mais previsibilidade para pronta entrega e projetos especiais.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section section-pad" id="consultoria">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Venda consultiva</span>
+            <h2>Produtos que pedem atendimento consultivo.</h2>
+            <p>Triagem simples para direcionar o lead certo.</p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/BANNER-LPS-MOBILE-1.jpg" alt="Inversores e automacao" loading="lazy">
+              <div class="service-body">
+                <span class="product-badge">Landing page consultiva</span>
+                <h3>Inversores e Automacao</h3>
+                <p>Variacao de velocidade, automacao e apoio tecnico.</p>
+                <button class="btn btn-secondary" type="button" data-chat-open>Quero atendimento</button>
+              </div>
+            </article>
+
+            <article class="service-card reveal reveal-delay-1">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/BANNER-LPS-MOBILE-2.jpg" alt="Motores eletricos industriais" loading="lazy">
+              <div class="service-body">
+                <span class="product-badge">Landing page consultiva</span>
+                <h3>Motores Eletricos Industriais</h3>
+                <p>Potencia, aplicacao, substituicao e performance.</p>
+                <button class="btn btn-secondary" type="button" data-chat-open>Quero atendimento</button>
+              </div>
+            </article>
+
+            <article class="service-card reveal reveal-delay-2">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/BANNER-LPS-MOBILE-3.jpg" alt="Motorredutores" loading="lazy">
+              <div class="service-body">
+                <span class="product-badge">Landing page consultiva</span>
+                <h3>Motorredutores</h3>
+                <p>Torque, relacao e condicoes reais de uso.</p>
+                <button class="btn btn-secondary" type="button" data-chat-open>Quero atendimento</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights-section section-pad">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Aplicacoes e diferenciais</span>
+            <h2>Diferenciais visiveis com leitura mais objetiva.</h2>
+            <p>Mais clareza e menos desvio.</p>
+          </div>
+
+          <div class="highlight-grid">
+            <article class="highlight-card reveal">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/SESSAO-5-1.jpg" alt="Expertise tecnica sob medida" loading="lazy">
+              <div class="highlight-body">
+                <h3>Expertise Tecnica Sob Medida</h3>
+                <p>Posicionamento ideal para reforcar confianca antes do contato consultivo.</p>
+              </div>
+            </article>
+
+            <article class="highlight-card reveal reveal-delay-1">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/SESSAO-5-2.jpg" alt="Variedade e qualidade" loading="lazy">
+              <div class="highlight-body">
+                <h3>Variedade e Qualidade</h3>
+                <p>Mais facilidade para classificar produto padrao, reposicao e aplicacao especial.</p>
+              </div>
+            </article>
+
+            <article class="highlight-card reveal reveal-delay-2">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/SESSAO-5-3.jpg" alt="Pos-venda incomparavel" loading="lazy">
+              <div class="highlight-body">
+                <h3>Pos-Venda Incomparavel</h3>
+                <p>Suporte, continuidade e atendimento comercial mais proximo do ciclo real do cliente.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="channels-section section-pad" id="marketplaces">
+        <div class="container split-grid split-grid-alt">
+          <div class="content-panel reveal">
+            <span class="section-kicker">Canais digitais</span>
+            <h2>Loja propria e marketplaces trabalhando juntos.</h2>
+            <p>O lead escolhe o canal e segue com menos atrito.</p>
+
+            <div class="channel-list">
+              <a class="channel-card" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">
+                <strong>Loja Oficial</strong>
+                <span>Fluxo completo para compra online, catalogo e navegacao por categoria.</span>
+              </a>
+              <a class="channel-card" href="https://loja.mercadolivre.com.br/ibob" target="_blank" rel="noreferrer">
+                <strong>Mercado Livre</strong>
+                <span>Canal ativo para ampliar alcance e capturar demanda transacional.</span>
+              </a>
+              <a class="channel-card" href="https://www.magazineluiza.com.br/motor-eletrico-monofasico-2cv-2-polos-alta-rotacao-com-polia-mercosul/p/hh9hbh46c9/pi/mtel/" target="_blank" rel="noreferrer">
+                <strong>Marketplace nacional</strong>
+                <span>Itens selecionados em Magalu para ampliar a presenca digital da marca.</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="image-stack reveal reveal-delay-1">
+            <article class="stack-card stack-card-primary">
+              <span class="panel-tag">Canal comercial</span>
+              <h3>Loja para SKU de compra objetiva</h3>
+              <p>Reposicao, automacao, tomadas, plugues, reles e itens com menor risco de erro.</p>
+            </article>
+
+            <article class="stack-card">
+              <span class="panel-tag panel-tag-soft">Canal consultivo</span>
+              <h3>Fluxo consultivo para ticket e complexidade maior</h3>
+              <p>Motores, inversores, motorredutores e demandas que precisam entrar no CRM para o time comercial.</p>
+            </article>
+
+            <article class="stack-card stack-card-image">
+              <img src="https://ibob.com.br/wp-content/uploads/2024/05/DSC09142-1.jpg" alt="Profissionais indicados iBob" loading="lazy">
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-section section-pad" id="suporte">
+        <div class="container support-grid">
+          <article class="map-card reveal">
+            <div class="section-heading heading-tight">
+              <span class="section-kicker">Atendimento nacional</span>
+              <h2>Entrega, cobertura e proximidade comercial em todo o Brasil.</h2>
+              <p>Cobertura nacional com operacao comercial e logistica mais organizada.</p>
+            </div>
+            <img
+              class="map-image"
+              src="https://ibob.com.br/wp-content/uploads/2024/04/MAPA-BR.png"
+              alt="Mapa de atendimento da iBob"
+              loading="lazy"
+            >
+          </article>
+
+          <article class="support-card reveal reveal-delay-1">
+            <span class="section-kicker">Profissionais indicados</span>
+            <h3>Ponte entre produto, instalacao e suporte em campo.</h3>
+            <p>Ideal para retrofit, manutencao e implantacao.</p>
+            <ul class="support-list">
+              <li>Ajuda em retrofit e manutencao</li>
+              <li>Apoio tecnico complementar em campo</li>
+              <li>Melhor experiencia entre compra e execucao</li>
+            </ul>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="#contato">Encontrar profissional</a>
+              <button class="btn btn-ghost" type="button" data-chat-open>Entrar em contato</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials-section section-pad">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="section-kicker">Prova social</span>
+            <h2>Depoimentos reais para reforcar confianca.</h2>
+            <p>Prova social sem roubar a decisao principal.</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <img class="testimonial-card reveal" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-1.png" alt="Depoimento 1" loading="lazy">
+            <img class="testimonial-card reveal reveal-delay-1" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-2.png" alt="Depoimento 2" loading="lazy">
+            <img class="testimonial-card reveal reveal-delay-2" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-3.png" alt="Depoimento 3" loading="lazy">
+            <img class="testimonial-card reveal" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-4.png" alt="Depoimento 4" loading="lazy">
+            <img class="testimonial-card reveal reveal-delay-1" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-5.png" alt="Depoimento 5" loading="lazy">
+            <img class="testimonial-card reveal reveal-delay-2" src="https://ibob.com.br/wp-content/uploads/2024/04/DEPOIMENTO-6.png" alt="Depoimento 6" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <section class="final-section section-pad" id="contato">
+        <div class="container final-grid">
+          <article class="guarantee-card reveal">
+            <img
+              class="seal-image"
+              src="https://ibob.com.br/wp-content/uploads/2024/04/Selo-Garantia-1.png"
+              alt="Garantia estendida iBob"
+              loading="lazy"
+            >
+            <div>
+              <span class="section-kicker">Garantia e suporte</span>
+              <h2>Garantia, FAQ e downloads no fechamento da jornada.</h2>
+              <p>Suporte acessivel sem competir com o CTA principal.</p>
+              <div class="card-actions">
+                <a class="btn btn-secondary" href="https://ibob.com.br/politica-de-garantia/" target="_blank" rel="noreferrer">Politica de garantia</a>
+                <a class="btn btn-ghost" href="https://ibob.com.br/faq/" target="_blank" rel="noreferrer">FAQ</a>
+                <a class="btn btn-ghost" href="https://ibob.com.br/central-de-downloads/" target="_blank" rel="noreferrer">Downloads</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="contact-card reveal reveal-delay-1">
+            <span class="section-kicker">Fechamento</span>
+            <h3>Compra direta na loja. Demanda tecnica com especialista.</h3>
+            <p>Fechamento simples para o lead seguir sem desvio.</p>
+            <div class="card-actions">
+              <a class="btn btn-primary" href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">Loja oficial</a>
+              <a class="btn btn-secondary" href="https://wa.me/555499860667?text=Gostaria%20de%20falar%20com%20um%20vendedor!" target="_blank" rel="noreferrer">Especialista iBob</a>
+            </div>
+            <div class="link-list">
+              <a href="https://ibob.com.br/contato/" target="_blank" rel="noreferrer">Pagina de contato</a>
+              <a href="https://ibob.com.br/trabalhe-conosco/" target="_blank" rel="noreferrer">Trabalhe conosco</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <strong>Institucional</strong>
+          <p><a href="https://ibob.com.br/produtos-e-servicos/" target="_blank" rel="noreferrer">Produtos e Servicos</a></p>
+          <p><a href="https://ibob.com.br/onde-comprar/" target="_blank" rel="noreferrer">Onde comprar</a></p>
+          <p><a href="https://ibob.com.br/profissionais-indicados/" target="_blank" rel="noreferrer">Profissionais indicados</a></p>
+        </div>
+
+        <div>
+          <strong>Suporte</strong>
+          <p><a href="https://ibob.com.br/faq/" target="_blank" rel="noreferrer">FAQ</a></p>
+          <p><a href="https://ibob.com.br/politica-de-garantia/" target="_blank" rel="noreferrer">Politica de garantia</a></p>
+          <p><a href="https://ibob.com.br/central-de-downloads/" target="_blank" rel="noreferrer">Central de downloads</a></p>
+        </div>
+
+        <div>
+          <strong>Canais de venda</strong>
+          <p><a href="https://loja.ibob.com.br/" target="_blank" rel="noreferrer">Loja Oficial</a></p>
+          <p><a href="https://loja.mercadolivre.com.br/ibob" target="_blank" rel="noreferrer">Mercado Livre</a></p>
+          <p><a href="https://www.magazineluiza.com.br/motor-eletrico-monofasico-2cv-2-polos-alta-rotacao-com-polia-mercosul/p/hh9hbh46c9/pi/mtel/" target="_blank" rel="noreferrer">Marketplace nacional</a></p>
+        </div>
+
+        <div>
+          <strong>Redes sociais</strong>
+          <p><a href="https://www.instagram.com/ibob.com.br/" target="_blank" rel="noreferrer">Instagram</a></p>
+          <p><a href="https://www.facebook.com/ibob.com.br" target="_blank" rel="noreferrer">Facebook</a></p>
+          <p><a href="https://www.linkedin.com/company/ibobmotores/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
