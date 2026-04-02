@@ -377,8 +377,37 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(100deg, rgba(255, 255, 255, 0.96) 8%, rgba(255, 255, 255, 0.88) 48%, rgba(13, 27, 42, 0.08) 100%),
+    linear-gradient(90deg, rgba(242, 244, 246, 0.88) 0%, rgba(242, 244, 246, 0.68) 34%, rgba(13, 27, 42, 0.24) 62%, rgba(13, 27, 42, 0.76) 100%),
     url("https://ibob.com.br/wp-content/uploads/2024/06/BANNER1_HOME_DESK_11.06-1.jpg") center/cover no-repeat;
+}
+
+.hero-video-bg,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-video-bg {
+  overflow: hidden;
+}
+
+.hero-video-embed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(13, 27, 42, 0.16) 32%, rgba(13, 27, 42, 0.58) 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.38) 26%, rgba(13, 27, 42, 0.1) 52%, rgba(13, 27, 42, 0.54) 100%);
 }
 
 .hero-grid {
@@ -476,48 +505,8 @@ h3 {
   line-height: 1.72;
 }
 
-.institutional-video-section {
-  background:
-    linear-gradient(180deg, rgba(216, 230, 242, 0.38) 0%, rgba(242, 244, 246, 0.9) 42%, rgba(242, 244, 246, 1) 100%);
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.video-shell {
-  padding: 34px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-sm);
-}
-
-.video-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-  gap: 24px;
-  align-items: end;
-}
-
-.video-meta {
-  display: grid;
-  gap: 10px;
-  justify-items: start;
-}
-
-.video-meta span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 0 14px;
-  border: 1px solid rgba(0, 91, 172, 0.14);
-  color: var(--blue-strong);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  background: rgba(216, 230, 242, 0.56);
-}
-
 .video-stage {
-  margin-top: 26px;
+  overflow: hidden;
   padding: 12px;
   background:
     linear-gradient(180deg, rgba(13, 27, 42, 0.92), rgba(13, 27, 42, 0.84));
@@ -527,7 +516,6 @@ h3 {
 .institutional-video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
   object-fit: cover;
   background: #0d1b2a;
 }
@@ -745,6 +733,19 @@ h3 {
   height: 100%;
   min-height: 460px;
   object-fit: cover;
+}
+
+.video-panel {
+  padding: 12px;
+}
+
+.video-stage-inline {
+  height: 100%;
+  padding: 0;
+}
+
+.video-stage-inline .institutional-video {
+  height: clamp(320px, 42vw, 480px);
 }
 
 .feature-grid {
@@ -1078,10 +1079,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .video-intro {
-    grid-template-columns: 1fr;
-  }
-
   .header-shell {
     gap: 18px;
     padding: 12px 0;
@@ -1182,8 +1179,7 @@ h3 {
   .guarantee-card,
   .contact-card,
   .hero-card,
-  .decision-card,
-  .video-shell {
+  .decision-card {
     padding: 24px;
   }
 
@@ -1234,13 +1230,19 @@ h3 {
     min-height: 320px;
   }
 
-  .video-stage {
-    margin-top: 22px;
-    padding: 8px;
+  .video-stage-inline .institutional-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
-  .video-meta {
-    gap: 8px;
+  .hero-video-bg {
+    display: none;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(13, 27, 42, 0.24) 36%, rgba(13, 27, 42, 0.64) 100%),
+      linear-gradient(90deg, rgba(242, 244, 246, 0.92) 0%, rgba(242, 244, 246, 0.74) 40%, rgba(13, 27, 42, 0.46) 100%);
   }
 
   .chat-float {

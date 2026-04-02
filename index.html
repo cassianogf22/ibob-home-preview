@@ -83,7 +83,19 @@
 
     <main id="topo">
       <section class="hero-section">
-        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="hero-video-bg">
+            <iframe
+              class="hero-video-embed"
+              src="https://www.youtube-nocookie.com/embed/ueUduJA1qGA?autoplay=1&mute=1&loop=1&playlist=ueUduJA1qGA&controls=0&rel=0&playsinline=1&modestbranding=1"
+              title="Vídeo institucional iBob"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              tabindex="-1"
+            ></iframe>
+          </div>
+          <div class="hero-overlay"></div>
+        </div>
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <span class="section-kicker">Seja bem-vindo à iBob</span>
@@ -129,42 +141,6 @@
               </div>
             </article>
           </aside>
-        </div>
-      </section>
-
-      <section class="institutional-video-section section-pad" id="institucional">
-        <div class="container">
-          <div class="video-shell reveal">
-            <div class="video-intro">
-              <div class="section-heading">
-                <span class="section-kicker">Vídeo institucional</span>
-                <h2>Conheça a iBob em movimento.</h2>
-                <p>Uma visão rápida da operação, da equipe e da estrutura que atende clientes em todo o Brasil.</p>
-              </div>
-
-              <div class="video-meta" aria-label="Destaques institucionais">
-                <span>Presença nacional</span>
-                <span>Especialistas em motores e automação</span>
-                <span>Atendimento para compra online e aplicações técnicas</span>
-              </div>
-            </div>
-
-            <div class="video-stage">
-              <video
-                class="institutional-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                controls
-                preload="metadata"
-                poster="https://ibob.com.br/wp-content/uploads/2024/06/DSC08961.jpg"
-              >
-                <source src="https://marketing.ibob.com.br/wp-content/uploads/2025/06/LP-FABRICANTE-DE-MAQUINAS.mp4" type="video/mp4">
-                Seu navegador não suporta a reprodução de vídeo.
-              </video>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -315,12 +291,22 @@
 
       <section class="about-section section-pad">
         <div class="container split-grid">
-          <div class="image-panel reveal">
-            <img
-              src="https://ibob.com.br/wp-content/uploads/2024/06/DSC08961.jpg"
-              alt="Equipe iBob"
-              loading="lazy"
-            >
+          <div class="image-panel video-panel reveal">
+            <div class="video-stage video-stage-inline">
+              <video
+                class="institutional-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+                poster="https://ibob.com.br/wp-content/uploads/2024/06/DSC08961.jpg"
+              >
+                <source src="https://marketing.ibob.com.br/wp-content/uploads/2025/06/LP-FABRICANTE-DE-MAQUINAS.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeo.
+              </video>
+            </div>
           </div>
 
           <div class="content-panel reveal reveal-delay-1">
