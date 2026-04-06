@@ -378,7 +378,7 @@ h3 {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(242, 244, 246, 0.88) 0%, rgba(242, 244, 246, 0.68) 34%, rgba(13, 27, 42, 0.24) 62%, rgba(13, 27, 42, 0.76) 100%),
-    url("https://ibob.com.br/wp-content/uploads/2024/06/BANNER1_HOME_DESK_11.06-1.jpg") center/cover no-repeat;
+    url("wp-content/uploads/2024/06/BANNER1_HOME_DESK_11.06-1.jpg") center/cover no-repeat;
 }
 
 .hero-video-bg,

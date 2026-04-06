@@ -11,6 +11,8 @@ const MIME_TYPES = {
   ".css": "text/css; charset=utf-8",
   ".js": "application/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".pdf": "application/pdf",
+  ".mp4": "video/mp4",
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".jpg": "image/jpeg",
@@ -27,8 +29,38 @@ function resolvePath(urlPath) {
   return absolute;
 }
 
+function getCacheControl(ext) {
+  if (ext === ".html" || ext === ".xml" || ext === ".txt") {
+    return "no-cache";
+  }
+
+  if ([
+    ".css",
+    ".js",
+    ".svg",
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp",
+    ".ico",
+    ".pdf",
+    ".mp4",
+  ].includes(ext)) {
+    return "public, max-age=86400";
+  }
+
+  return "no-cache";
+}
+
 const server = http.createServer(async (req, res) => {
   try {
+    const cleanPath = decodeURIComponent((req.url || "/").split("?")[0]);
+    if (cleanPath === "/home" || cleanPath === "/home/") {
+      res.writeHead(301, { Location: "/" });
+      res.end();
+      return;
+    }
+
     const targetPath = resolvePath(req.url || "/");
     if (!targetPath) {
       res.writeHead(403);
@@ -43,7 +75,7 @@ const server = http.createServer(async (req, res) => {
 
     res.writeHead(200, {
       "Content-Type": MIME_TYPES[ext] || "application/octet-stream",
-      "Cache-Control": "no-store",
+      "Cache-Control": getCacheControl(ext),
     });
     res.end(body);
   } catch {
@@ -52,6 +84,6 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, "127.0.0.1", () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`iBob localhost rodando em http://localhost:${PORT}`);
 });
