@@ -464,57 +464,87 @@ h3 {
 }
 
 .hero-search {
-  max-width: 620px;
+  max-width: 720px;
   margin: 26px 0 0;
 }
 
 .hero-search-shell {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  padding: 12px 18px 12px 20px;
+  background: #263b88;
+  box-shadow: var(--shadow-sm);
 }
 
 .hero-search-input {
   flex: 1 1 auto;
   min-width: 0;
-  min-height: 56px;
-  padding: 0 18px;
-  border: 1px solid rgba(12, 32, 52, 0.14);
-  border-radius: 2px;
-  color: var(--text-strong);
-  background: #fff;
-  box-shadow: var(--shadow-sm);
+  min-height: 46px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.92);
+  border-radius: 0;
+  color: #ffffff;
+  background: transparent;
+  box-shadow: none;
   font-size: 18px;
 }
 
 .hero-search-input::placeholder {
-  color: #6c7d91;
+  color: rgba(255, 255, 255, 0.78);
+  font-style: italic;
 }
 
 .hero-search-input:focus {
-  outline: 2px solid rgba(0, 91, 172, 0.14);
-  border-color: var(--blue);
+  outline: none;
+  border-color: #ffffff;
 }
 
 .hero-search-button {
-  min-height: 56px;
-  min-width: 148px;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  min-width: 52px;
+  height: 52px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero-search-button svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-search-button:hover {
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .hero-search-note {
   margin: 10px 0 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .hero-search-note a {
   color: var(--blue);
-  font-weight: 700;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .hero-search-note a:hover {
-  text-decoration: underline;
+  color: var(--blue-strong);
 }
 
 .sr-only {
@@ -1509,8 +1539,23 @@ h3 {
     max-width: none;
   }
 
+  .hero-search-shell {
+    padding: 12px 14px;
+  }
+
   .hero-search-input {
     font-size: 16px;
+  }
+
+  .hero-search-button {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+
+  .hero-search-button svg {
+    width: 24px;
+    height: 24px;
   }
 
   .hero-copy,
