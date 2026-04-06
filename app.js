@@ -7,6 +7,21 @@ const chatOpenButtons = Array.from(document.querySelectorAll("[data-chat-open]")
 const chatCloseButtons = Array.from(document.querySelectorAll("[data-chat-close]"));
 const scrollButtons = Array.from(document.querySelectorAll("[data-scroll-target]"));
 const revealItems = Array.from(document.querySelectorAll(".reveal"));
+const storeSearchForms = Array.from(document.querySelectorAll("[data-store-search-form]"));
+
+function buildStoreSearchUrl(query) {
+  const params = new URLSearchParams({
+    loja: "1035972",
+    palavra_busca: query,
+  });
+
+  return `https://loja.ibob.com.br/loja/busca.php?${params.toString()}`;
+}
+
+function isStaticSearchMode() {
+  const host = window.location.hostname.toLowerCase();
+  return host.endsWith("github.io") || window.location.protocol === "file:";
+}
 
 function setChatState(isOpen) {
   if (!chatPanel) return;
@@ -79,6 +94,23 @@ document.addEventListener("keydown", (event) => {
 
 navLinks?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => setMenuState(false));
+});
+
+storeSearchForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    const queryInput = form.querySelector('input[name="q"]');
+    const query = queryInput instanceof HTMLInputElement ? queryInput.value.trim() : "";
+    if (!query) {
+      event.preventDefault();
+      queryInput?.focus();
+      return;
+    }
+
+    if (!isStaticSearchMode()) return;
+
+    event.preventDefault();
+    window.location.assign(buildStoreSearchUrl(query));
+  });
 });
 
 revealItems.forEach((item) => revealObserver.observe(item));

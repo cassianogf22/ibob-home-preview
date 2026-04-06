@@ -463,6 +463,61 @@ h3 {
   line-height: 1.78;
 }
 
+.hero-search {
+  margin-top: 28px;
+}
+
+.hero-search-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--text-strong);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.hero-search-shell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-search-input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  color: var(--text-strong);
+  background: #fff;
+  font-size: 16px;
+}
+
+.hero-search-input::placeholder {
+  color: #76879a;
+}
+
+.hero-search-input:focus {
+  outline: 2px solid rgba(0, 91, 172, 0.18);
+  border-color: var(--blue);
+}
+
+.hero-search-button {
+  min-height: 54px;
+  white-space: nowrap;
+}
+
+.hero-search-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .hero-points {
   flex-wrap: wrap;
   margin-top: 28px;
@@ -1398,6 +1453,7 @@ h3 {
 
   .nav-links,
   .hero-actions,
+  .hero-search-shell,
   .card-actions,
   .mini-links,
   .hero-points,
@@ -1433,6 +1489,7 @@ h3 {
   }
 
   .hero-actions .btn,
+  .hero-search-button,
   .section-cta .btn {
     width: 100%;
   }

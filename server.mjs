@@ -5,6 +5,9 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 4177);
+const STORE_ID = "1035972";
+const STORE_SEARCH_BASE = "https://loja.ibob.com.br/loja/busca.php";
+const SALES_WHATSAPP_NUMBER = "555499860667";
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -52,11 +55,58 @@ function getCacheControl(ext) {
   return "no-cache";
 }
 
+function buildStoreSearchUrl(query) {
+  const searchParams = new URLSearchParams({
+    loja: STORE_ID,
+    palavra_busca: query,
+  });
+
+  return `${STORE_SEARCH_BASE}?${searchParams.toString()}`;
+}
+
+function buildWhatsAppUrl(query) {
+  const message = `Olá! Não encontrei "${query}" na loja online. Podem me ajudar a localizar esse item?`;
+  return `https://wa.me/${SALES_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+async function getSearchRedirect(query) {
+  const searchUrl = buildStoreSearchUrl(query);
+
+  try {
+    const response = await fetch(searchUrl, {
+      headers: {
+        "User-Agent": "iBob Search Redirect",
+      },
+    });
+
+    const raw = Buffer.from(await response.arrayBuffer()).toString("latin1");
+    const hasNoResults = /Produto n(?:ao|ão) encontrado|sem-resultados-na-busca/i.test(raw);
+    return hasNoResults ? buildWhatsAppUrl(query) : searchUrl;
+  } catch {
+    return searchUrl;
+  }
+}
+
 const server = http.createServer(async (req, res) => {
   try {
-    const cleanPath = decodeURIComponent((req.url || "/").split("?")[0]);
+    const requestUrl = new URL(req.url || "/", `http://localhost:${PORT}`);
+    const cleanPath = decodeURIComponent(requestUrl.pathname);
     if (cleanPath === "/home" || cleanPath === "/home/") {
       res.writeHead(301, { Location: "/" });
+      res.end();
+      return;
+    }
+
+    if (cleanPath === "/buscar" || cleanPath === "/buscar/") {
+      const query = requestUrl.searchParams.get("q")?.trim() || "";
+      if (!query) {
+        res.writeHead(302, { Location: "/" });
+        res.end();
+        return;
+      }
+
+      const redirectUrl = await getSearchRedirect(query);
+      res.writeHead(302, { Location: redirectUrl });
       res.end();
       return;
     }

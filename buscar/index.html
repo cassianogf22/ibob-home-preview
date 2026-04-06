@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscar na loja | iBob</title>
+    <meta name="description" content="Redirecionamento da busca da iBob para a loja online ou para o atendimento comercial.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="theme-color" content="#0d67c7">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="../app.js"></script>
+    <script>
+      function buildStoreSearchUrl(query) {
+        const params = new URLSearchParams({
+          loja: "1035972",
+          palavra_busca: query,
+        });
+
+        return `https://loja.ibob.com.br/loja/busca.php?${params.toString()}`;
+      }
+
+      function buildWhatsAppUrl(query) {
+        const message = query
+          ? `Olá! Não encontrei "${query}" na loja online. Podem me ajudar a localizar esse item?`
+          : "Olá! Preciso de ajuda para localizar um item na loja online.";
+
+        return `https://wa.me/555499860667?text=${encodeURIComponent(message)}`;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const query = (params.get("q") || "").trim();
+        const storeUrl = query ? buildStoreSearchUrl(query) : "https://loja.ibob.com.br/";
+        const whatsappUrl = buildWhatsAppUrl(query);
+
+        const querySlots = document.querySelectorAll("[data-search-term]");
+        const storeLinks = document.querySelectorAll("[data-store-link]");
+        const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
+
+        querySlots.forEach((slot) => {
+          slot.textContent = query || "seu produto";
+        });
+
+        storeLinks.forEach((link) => {
+          link.setAttribute("href", storeUrl);
+        });
+
+        whatsappLinks.forEach((link) => {
+          link.setAttribute("href", whatsappUrl);
+        });
+
+        if (!query) return;
+
+        window.setTimeout(() => {
+          window.location.replace(storeUrl);
+        }, 450);
+      });
+    </script>
+  </head>
+  <body class="inner-page">
+    <main class="page-main">
+      <section class="page-hero-simple">
+        <div class="container page-hero-shell">
+          <article class="page-hero-copy reveal is-visible">
+            <div class="breadcrumb">
+              <a href="../">Home</a>
+              <span>/</span>
+              <span>Buscar na loja</span>
+            </div>
+            <span class="section-kicker">Busca inteligente</span>
+            <h1>Abrindo resultados para <span data-search-term>seu produto</span>.</h1>
+            <p class="hero-lead">Você será encaminhado para a loja online da iBob. Se não houver anúncio disponível, fale com nosso atendimento comercial.</p>
+            <div class="card-actions">
+              <a class="btn btn-primary" data-store-link href="https://loja.ibob.com.br/">Ver resultados na loja</a>
+              <a class="btn btn-secondary" data-whatsapp-link href="https://wa.me/555499860667?text=Olá!%20Preciso%20de%20ajuda%20para%20localizar%20um%20item%20na%20loja%20online.">Falar no WhatsApp</a>
+            </div>
+          </article>
+
+          <aside class="page-hero-side reveal is-visible">
+            <article class="page-card">
+              <span class="page-note">Loja online</span>
+              <h3>Busca direcionada</h3>
+              <p>Consulta rápida para abrir os resultados diretamente na loja da iBob.</p>
+            </article>
+            <article class="page-card">
+              <span class="page-note">Atendimento</span>
+              <h3>Sem anúncio disponível?</h3>
+              <p>Nosso time comercial continua a busca com você pelo WhatsApp.</p>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
