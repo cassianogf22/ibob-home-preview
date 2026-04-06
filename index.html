@@ -113,21 +113,25 @@
             <span class="section-kicker">Loja online especializada em motores elétricos</span>
 
             <form class="hero-search" action="./buscar/" method="get" data-store-search-form>
-              <label class="hero-search-label" for="hero-search-input">O que você procura?</label>
+              <label class="sr-only" for="hero-search-input">O que você procura?</label>
               <div class="hero-search-shell">
                 <input
                   id="hero-search-input"
                   class="hero-search-input"
                   type="search"
                   name="q"
-                  placeholder="Ex.: motor 1cv, inversor, relé, plugue"
+                  placeholder="O que você procura na loja?"
                   autocomplete="off"
                   spellcheck="false"
                   required
                 >
-                <button class="btn btn-primary hero-search-button" type="submit">Buscar na loja</button>
+                <button class="btn btn-primary hero-search-button" type="submit">Buscar</button>
               </div>
-              <p class="hero-search-note">Se não houver anúncio disponível, nosso atendimento continua pelo WhatsApp.</p>
+              <p class="hero-search-note">
+                <a href="https://wa.me/555499860667?text=Olá!%20Preciso%20de%20ajuda%20para%20localizar%20um%20item%20na%20loja%20online." target="_blank" rel="noreferrer">
+                  Não encontrou? Fale com nossa equipe
+                </a>
+              </p>
             </form>
 
             <h1>Referência nacional em motores elétricos, motorredutores e automação industrial online.</h1>
