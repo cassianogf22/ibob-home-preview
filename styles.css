@@ -369,7 +369,7 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1.1;
 }
 
@@ -583,9 +583,14 @@ h3 {
 }
 
 .hero-card {
-  min-height: 220px;
-  padding: 24px;
+  min-height: 190px;
+  padding: 22px;
   border-radius: var(--radius-lg);
+}
+
+.hero-card h2 {
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.02;
 }
 
 .hero-card-strong {
@@ -602,9 +607,9 @@ h3 {
 }
 
 .hero-card p {
-  margin: 14px 0 18px;
+  margin: 12px 0 14px;
   color: var(--muted);
-  line-height: 1.72;
+  line-height: 1.52;
 }
 
 .video-stage {
@@ -652,7 +657,7 @@ h3 {
 }
 
 .decision-card {
-  padding: 28px;
+  padding: 22px;
   border-radius: var(--radius-lg);
   border-left: 3px solid var(--blue);
   transition:
@@ -690,8 +695,8 @@ h3 {
 .decision-card ul,
 .support-list {
   display: grid;
-  gap: 10px;
-  margin: 18px 0 24px;
+  gap: 8px;
+  margin: 12px 0 16px;
   padding: 0;
   list-style: none;
 }
@@ -724,6 +729,8 @@ h3 {
 .contact-card h3,
 .stack-card h3 {
   margin-top: 16px;
+  font-size: 24px;
+  line-height: 1.06;
 }
 
 .decision-card p,
@@ -733,7 +740,7 @@ h3 {
 .contact-card p,
 .stack-card p,
 .content-panel p {
-  line-height: 1.72;
+  line-height: 1.56;
 }
 
 .store-section {
@@ -981,9 +988,9 @@ h3 {
 }
 
 .guarantee-card h2 {
-  font-size: clamp(28px, 3.8vw, 46px);
+  font-size: clamp(24px, 3vw, 38px);
   line-height: 1;
-  max-width: 10ch;
+  max-width: 11ch;
 }
 
 .seal-image {
