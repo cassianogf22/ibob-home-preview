@@ -52,7 +52,8 @@ input {
 }
 
 .container {
-  width: min(1760px, calc(100% - 48px));
+  width: calc(100% - 48px);
+  max-width: 1880px;
   margin: 0 auto;
 }
 
@@ -630,7 +631,8 @@ input {
 
 @media (max-width: 640px) {
   .container {
-    width: min(100% - 24px, 1760px);
+    width: calc(100% - 24px);
+    max-width: 1880px;
   }
 
   .utility-bar__links {
