@@ -28,6 +28,7 @@ body {
   background: var(--bg);
   font-family: "Manrope", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
@@ -110,7 +111,7 @@ legend { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 8
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr minmax(0, 420px);
   gap: 48px;
   align-items: start;
   position: relative;
@@ -619,13 +620,24 @@ legend { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 8
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
+
+/* Tablet landscape */
+@media (max-width: 1100px) {
+  .hero-grid {
+    grid-template-columns: 1fr minmax(0, 380px);
+    gap: 32px;
+  }
+  .diff-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Tablet portrait */
+@media (max-width: 900px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
   .hero { padding: 88px 0 48px; }
-  .hero-bullets { grid-template-columns: 1fr; }
+  .lead-form { max-width: 500px; }
   .services-grid,
   .benefits-grid,
   .proof-grid,
@@ -637,19 +649,29 @@ legend { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 8
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 760px) {
-  .hero { padding: 80px 0 40px; }
-  .hero-title { font-size: 26px; }
-  .section { padding: 56px 0; }
-  .section-cta { padding: 56px 0; }
+/* Mobile */
+@media (max-width: 600px) {
+  :root { --container: min(1140px, calc(100% - 32px)); }
+  .hero { padding: 76px 0 36px; }
+  .hero-title { font-size: 24px; }
+  .hero-sub { font-size: 15px; }
+  .hero-bullets li { font-size: 15px; }
+  .section { padding: 48px 0; }
+  .section-cta { padding: 48px 0; }
+  .section-title { font-size: 22px; }
   .services-grid,
   .benefits-grid,
   .proof-grid,
   .objection-grid,
   .diff-grid { grid-template-columns: 1fr; }
   .steps-grid { flex-direction: column; }
-  .lead-form { padding: 24px 20px; }
+  .step-card { max-width: none; }
+  .lead-form { padding: 24px 20px; max-width: none; }
+  .form-title { font-size: 18px; }
   .form-trust { flex-direction: column; gap: 10px; }
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
   .header-cta { padding: 8px 16px; font-size: 13px; }
+  .btn-lg { padding: 16px 28px; font-size: 16px; }
+  .cta-inner h2 { font-size: 22px; }
+  .cta-inner p { font-size: 15px; }
 }
