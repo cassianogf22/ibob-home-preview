@@ -130,15 +130,15 @@ legend { font-weight: 600; font-size: 14px; color: var(--text); margin-bottom: 8
   max-width: 540px;
 }
 .hero-bullets {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .hero-bullets li {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
 }
